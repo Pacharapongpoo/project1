@@ -1,0 +1,12 @@
+<h2>Healthy Food</h2>
+
+<div *ngIf="hero">
+  <img mat-card-image src="assets/img/2.jpg">
+  <div>
+    <label for="hero-name">ชื่อรายการ  : </label>
+    &nbsp;&nbsp;<input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name" disabled /><br>
+    <label for="hero-detail">รายละเอียด: </label>
+    &nbsp;&nbsp;<input id="hero-name" [(ngModel)]="hero.detail" placeholder="Hero detail" disabled />
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+</div>
