@@ -1,0 +1,79 @@
+<div id="img_container" >
+  <img src="assets/img/logo.jpg">
+</div>
+
+
+<mat-grid-list cols="4" rows="2" rowHeight="250px">
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+    <mat-card class="example-card" align="center">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>อกไก่</mat-card-title>
+        <mat-card-subtitle>อกไก่ต้องมีคนหมัก อกหักต้องมีคนใหม่</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/1.jpg">
+      <mat-card-content>
+        <p>
+          อกไก่เพื่อสุขภาพ ราคา 69.-
+        </p>
+      </mat-card-content>
+      <section>
+        <a *ngFor="let chick of chicks" mat-raised-button href="/detail/{{chick.id}}">รายละเอียด</a>
+      </section>
+    </mat-card>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <mat-card class="example-card" align="center">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>น่องไก่</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/2.jpg">
+      <mat-card-content>
+        <p>
+          น่องไก่เพื่อสุขภาพ ต้องมีคนหมัก แต่น่องไก่หักต้องซื้อใหม่ ราคาขีดละ 49.-
+        </p>
+      </mat-card-content>
+      <section>
+        <a *ngFor="let aogchick of aogchicks" mat-raised-button href="/detail/{{aogchick.id}}">รายละเอียด</a>
+      </section>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+    <mat-card class="example-card" align="center">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>เนื้อปลาแซลม่อน</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/3.jpg">
+      <mat-card-content>
+        <p>
+          เนื้อปลาแซลม่อนเพื่อสุขภาพ ราคาชิ้นละ 129.-
+        </p>
+      </mat-card-content>
+      <section>
+        <a *ngFor="let fish of fishs" mat-raised-button href="/detail/{{fish.id}}">รายละเอียด</a>
+      </section>
+    </mat-card>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <mat-card class="example-card" align="center">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>เนื้อหมูอนามัย</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/4.jpg">
+      <mat-card-content>
+        <p>
+          เนื้อหมูอนามัยเพื่อสุขภาพ ราคากิโลละ 259.-
+        </p>
+      </mat-card-content>
+      <section>
+        <a *ngFor="let pig of pigs" mat-raised-button href="/detail/{{pig.id}}">รายละเอียด</a>
+      </section>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
